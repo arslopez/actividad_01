@@ -26,3 +26,9 @@ def pedir_datos_deci():
     deci=covern(datdeclat,datdeclon)
     coverdas(deci)
     return 0
+
+#conversion a cadena de numeros ingresados
+def covern(dat1, dat2):
+    xlat=str(dat1)
+    xlon=str(dat2)
+    return xlat,xlon
