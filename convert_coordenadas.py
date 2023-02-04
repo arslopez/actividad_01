@@ -65,3 +65,29 @@ def coversad(data):
     lon = data[1]  # División para la conversion de la tupla
     conlat = lat.split()  # Se utiliza un separador en python
     conlon = lon.split()  # Se utiliza un separador en python
+
+    # Tratamiento de latitud e impresion
+    conlat[2] = float(conlat[2]) / 60
+    conlat[1] = ((float(conlat[1])) + conlat[2]) / 60
+    if float(conlat[0]) < 0:
+        res = float(conlat[0]) - conlat[1]
+    else:
+        res = float(conlat[0]) + conlat[1]
+    print("######################################################")
+    print("Latitud en decimales: ", res)
+
+    # Tratamiento de longitud e Impresion
+    # Tratamiento de latitud e impresion
+    conlon[2] = float(conlon[2]) / 60
+    conlon[1] = ((float(conlon[1])) + conlon[2]) / 60
+    if float(conlon[0]) < 0:
+        res1 = float(conlon[0]) - conlon[1]
+    else:
+        res1 = float(conlon[0]) + conlon[1]
+    print(" ")
+    print("Longitud en decimales: ", res)
+
+    return 0
+
+
+menu()
